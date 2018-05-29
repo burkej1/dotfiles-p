@@ -9,21 +9,21 @@
 #   - tmux
 #   - vim
 
-# Make sure dotfiles folder exists in home
-if [ ! -d ~/dotfiles ]; then
+# Make sure dotfiles-p folder exists in home
+if [ ! -d "~/dotfiles-p-p" ]; then
     exit 1
 fi
 
 
 # # # Bash Setup # # #
-ln -s ~/dotfiles/.git-completion.bash ~/
-ln -s ~/dotfiles/.bash_profile ~/
+ln -s ~/dotfiles-p/.git-completion.bash ~/
+ln -s ~/dotfiles-p/.bash_profile ~/
 source ~/.bash_profile
 
 
 # # # Vim Setup # # # 
 # Symlink .vimrc
-ln -s ~/dotfiles/.vimrc ~/
+ln -s ~/dotfiles-p/.vimrc ~/
 
 # Install Pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -47,7 +47,7 @@ cd
 
 # # # TMUX Setup # # # 
 # Symlink .tmux.conf
-ln -s ~/dotfiles/.tmux.conf ~/
+ln -s ~/dotfiles-p/.tmux.conf ~/
 
 # Install TMUX plugin manager (tpm)
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
