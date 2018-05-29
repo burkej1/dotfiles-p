@@ -16,3 +16,7 @@ export PS2="| => "
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+# Source any local aliases/path settings
+if [ -f ~/.bash_profile_local ]; then
+    source ~/.bash_profile_local
+fi
