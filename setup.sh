@@ -10,7 +10,7 @@
 #   - vim
 
 # Make sure dotfiles-p folder exists in home
-if [ ! -d "~/dotfiles-p" ]; then
+if [ ! -d ~/dotfiles-p ]; then
     exit 1
 fi
 
