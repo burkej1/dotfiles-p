@@ -10,7 +10,7 @@
 #   - vim
 
 # Make sure dotfiles-p folder exists in home
-if [ ! -d "~/dotfiles-p-p" ]; then
+if [ ! -d "~/dotfiles-p" ]; then
     exit 1
 fi
 
@@ -18,7 +18,6 @@ fi
 # # # Bash Setup # # #
 ln -s ~/dotfiles-p/.git-completion.bash ~/
 ln -s ~/dotfiles-p/.bash_profile ~/
-source ~/.bash_profile
 
 
 # # # Vim Setup # # # 
