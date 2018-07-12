@@ -95,7 +95,8 @@
   :straight t
   :config
   (evil-snipe-mode +1)
-  (evil-snipe-override-mode +1))
+  (evil-snipe-override-mode +1)
+  (setq evil-snipe-scope 'visible))
 
 (use-package neotree
   :straight t
