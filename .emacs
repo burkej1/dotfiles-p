@@ -53,26 +53,6 @@
   ;; Make auctex aware of multi-file document structures
   (setq-default TeX-master nil)
 
-(use-package helm
-  :straight t
-  :config
-  (helm-mode 1))
-
-(use-package evil-leader
-  :straight t
-  :config
-  ;; Note: should be enabled before evil mode
-  (global-evil-leader-mode)
-  ;; Evil-leader combination bindings
-  (evil-leader/set-leader "<SPC>")
-  (evil-leader/set-key "w" 'save-buffer))
-
-(use-package leuven-theme
-  :straight t
-  :init
-  ;; Changing leuven theme org mode heading scaling
-  (setq leuven-scale-outline-headlines 1.2))
-
 (use-package evil
   :straight t
   :init
@@ -81,8 +61,31 @@
   :config
   (evil-mode t))
 
+(use-package helm
+  :straight t
+  :config
+  (helm-mode 1))
+
+(use-package leuven-theme
+  :straight t
+  :init
+  ;; Changing leuven theme org mode heading scaling
+  (setq leuven-scale-outline-headlines 1.2))
+
+(use-package evil-leader
+  :straight t
+  ;; I know it says below this should be enabled before but it seems to break C-u otherwise
+  :after evil
+  :config
+  ;; Note: should be enabled before evil mode
+  (global-evil-leader-mode)
+  ;; Evil-leader combination bindings
+  (evil-leader/set-leader "<SPC>")
+  (evil-leader/set-key "w" 'save-buffer))
+
 (use-package evil-org
   :straight t
+  :after evil
   :config
   (add-hook 'org-mode-hook 'evil-org-mode)
   (add-hook 'evil-org-mode-hook
@@ -93,6 +96,7 @@
 
 (use-package evil-snipe
   :straight t
+  :after evil
   :config
   (evil-snipe-mode +1)
   (evil-snipe-override-mode +1)
@@ -115,7 +119,6 @@
   :straight t
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
-
 
 ;; NOTE: Some packages are placed after the theme specification by necessity
 ;; Menu set options (currently just theme)
