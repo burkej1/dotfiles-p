@@ -104,7 +104,7 @@
 
 (use-package neotree
   :straight t
-  :requires (evil all-the-icons)
+  :after evil
   :config
   ;; Rebinding evil-mode keys for neotree compatibility
   (evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
