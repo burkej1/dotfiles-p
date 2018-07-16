@@ -21,6 +21,8 @@
 ;   (setq right-margin-width 4))
 ; ; Enable for org mode
 ; (add-hook 'org-mode-hook 'my-set-margins)
+; ; Colour
+; (set-face-attribute 'fringe nil :background "#EFF0F1" :foreground "#EFF0F1")
 
 ;; Setting font
 (set-face-attribute 'default nil :family "Fira Code" :height 160)
@@ -174,6 +176,3 @@
 ;; Setting up smart mode line (complains if before the menu set theme
 (setq sml/theme 'light)
 (sml/setup)
-
-; Colour
-(set-face-attribute 'fringe nil :background "#EFF0F1" :foreground "#EFF0F1")
