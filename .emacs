@@ -12,6 +12,16 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
+; ;; Margin settings (WIP)
+; ; Colour at bottom of config to avoid overwriting it
+; ; Size
+; (defun my-set-margins ()
+;   "Set margins in current buffer"
+;   (setq left-margin-width  4)
+;   (setq right-margin-width 4))
+; ; Enable for org mode
+; (add-hook 'org-mode-hook 'my-set-margins)
+
 ;; Setting font
 (set-face-attribute 'default nil :family "Fira Code" :height 160)
 
@@ -160,14 +170,10 @@
      (340 . "#94BFF3")
      (360 . "#DC8CC3"))))
  '(vc-annotate-very-old-color "#DC8CC3"))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
 ;; Setting up smart mode line (complains if before the menu set theme
 (setq sml/theme 'light)
 (sml/setup)
 
+; Colour
+(set-face-attribute 'fringe nil :background "#EFF0F1" :foreground "#EFF0F1")
