@@ -12,7 +12,7 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 ;; Setting ibuffer as the default buffer list
-(global-set-key (kbd "C-x C-b") 'ibuffer)
+(global-set-key (kbd "C-x b") 'ibuffer)
 
 ; ;; Margin settings (WIP)
 ; ; Colour at bottom of config to avoid overwriting it
