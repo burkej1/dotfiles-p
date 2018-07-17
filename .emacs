@@ -11,6 +11,8 @@
 ;; Disabling automatic backup and autosaving
 (setq make-backup-files nil)
 (setq auto-save-default nil)
+;; Setting ibuffer as the default buffer list
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ; ;; Margin settings (WIP)
 ; ; Colour at bottom of config to avoid overwriting it
@@ -64,6 +66,12 @@
   (setq TeX-parse-self t)
   ;; Make auctex aware of multi-file document structures
   (setq-default TeX-master nil)
+
+(use-package exec-path-from-shell
+  :straight t
+  :config
+  (when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize)))
 
 (use-package evil
   :straight t
