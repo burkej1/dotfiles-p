@@ -131,3 +131,11 @@ highlight ALEError ctermbg=52
 
 " Using the rust compiler for linting with ALE
 " let g:ale_linters = {'rust': ['rustc']}
+
+" Modifying indentation rules for yaml (and cwl) files
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
+autocmd FileType cwl setlocal shiftwidth=2 tabstop=2
+
+" Changing where splits appear to something more natural
+set splitbelow
+set splitright
