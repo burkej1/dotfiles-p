@@ -139,3 +139,6 @@ autocmd FileType cwl setlocal shiftwidth=2 tabstop=2
 " Changing where splits appear to something more natural
 set splitbelow
 set splitright
+
+" Changing commentary setting for cwl files
+autocmd FileType cwl setlocal commentstring=#\ %s
