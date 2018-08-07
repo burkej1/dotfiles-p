@@ -9,8 +9,12 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 alias less="less -nS"  # Open less with no line wrapping or numbers by default
 
 # Prompt
-export PS1="__ __ __\n\w \n| => "
-export PS2="| => "
+# export PS1="__ __ __\n\w \n| => "
+# export PS2="| => "
+export PS1="\n\w \nλ "
+export PS2="λ "
+
+
 
 # Setting vim as the default editor (for use with Ctrl-x Ctrl-e)
 export VISUAL=vim
