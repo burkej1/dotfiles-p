@@ -15,7 +15,16 @@
 (global-set-key (kbd "C-x b") 'ibuffer)
 
 ;; Setting font
-(set-face-attribute 'default nil :family "Fira Code" :height 160)
+; (set-face-attribute 'default nil :family "Fira Code" :height 160)
+(add-to-list 'default-frame-alist
+             '(font . "Fira Code-16"))
+
+; Fixing weird problem where bold text was smaller in org mode
+(setq org-emphasis-alist
+ (quote
+  (
+   ("*" (bold :height 170))
+   )))
 
 ;; Org mode settings for line wrapping and indentation
 ;; If org is installed via a package manager wrap with with-eval-after-load
@@ -132,7 +141,8 @@
 
 ;; Theme Settings
 ; (load-theme 'zenburn t)
-(load-theme 'spacemacs-dark t)
+(load-theme 'leuven t)
+; (load-theme 'spacemacs-dark t)
 
 ;; Setting up smart mode line (complains if before the menu set theme
 (setq sml/no-confirm-load-theme t)
