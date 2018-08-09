@@ -14,18 +14,6 @@
 ;; Setting ibuffer as the default buffer list
 (global-set-key (kbd "C-x b") 'ibuffer)
 
-; ;; Margin settings (WIP)
-; ; Colour at bottom of config to avoid overwriting it
-; ; Size
-; (defun my-set-margins ()
-;   "Set margins in current buffer"
-;   (setq left-margin-width  4)
-;   (setq right-margin-width 4))
-; ; Enable for org mode
-; (add-hook 'org-mode-hook 'my-set-margins)
-; ; Colour
-; (set-face-attribute 'fringe nil :background "#EFF0F1" :foreground "#EFF0F1")
-
 ;; Setting font
 (set-face-attribute 'default nil :family "Fira Code" :height 160)
 
@@ -58,6 +46,7 @@
 (straight-use-package 'zenburn-theme)
 (straight-use-package 'all-the-icons)
 (straight-use-package 'smart-mode-line)
+(straight-use-package 'spacemacs-theme)
 
 ;; Auctex (doesn't seem to work with use-package, indented to match formatting)
 (straight-use-package 'auctex)
@@ -140,47 +129,12 @@
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
-;; NOTE: Some packages are placed after the theme specification by necessity
-;; Menu set options (currently just theme)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(company-quickhelp-color-background "#4F4F4F")
- '(company-quickhelp-color-foreground "#DCDCCC")
- '(custom-enabled-themes (quote (leuven)))
- '(custom-safe-themes
-   (quote
-    ("9a155066ec746201156bb39f7518c1828a73d67742e11271e4f24b7b178c4710" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "420459d6eeb45aadf5db5fbcc3d6990b65141c104911f7359454fc29fa9d87a0" default)))
- '(fci-rule-color "#383838")
- '(nrepl-message-colors
-   (quote
-    ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
- '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
- '(vc-annotate-background "#2B2B2B")
- '(vc-annotate-color-map
-   (quote
-    ((20 . "#BC8383")
-     (40 . "#CC9393")
-     (60 . "#DFAF8F")
-     (80 . "#D0BF8F")
-     (100 . "#E0CF9F")
-     (120 . "#F0DFAF")
-     (140 . "#5F7F5F")
-     (160 . "#7F9F7F")
-     (180 . "#8FB28F")
-     (200 . "#9FC59F")
-     (220 . "#AFD8AF")
-     (240 . "#BFEBBF")
-     (260 . "#93E0E3")
-     (280 . "#6CA0A3")
-     (300 . "#7CB8BB")
-     (320 . "#8CD0D3")
-     (340 . "#94BFF3")
-     (360 . "#DC8CC3"))))
- '(vc-annotate-very-old-color "#DC8CC3"))
+
+;; Theme Settings
+; (load-theme 'zenburn t)
+(load-theme 'spacemacs-dark t)
 
 ;; Setting up smart mode line (complains if before the menu set theme
-(setq sml/theme 'light)
+(setq sml/no-confirm-load-theme t)
+(setq sml/theme 'dark)
 (sml/setup)
