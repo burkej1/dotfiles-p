@@ -146,5 +146,5 @@
 
 ;; Setting up smart mode line (complains if before the menu set theme
 (setq sml/no-confirm-load-theme t)
-(setq sml/theme 'dark)
+(setq sml/theme 'light)
 (sml/setup)
