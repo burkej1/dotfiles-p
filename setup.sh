@@ -42,6 +42,7 @@ git clone https://github.com/tpope/vim-sensible
 git clone https://github.com/tpope/vim-commentary
 git clone https://github.com/kshenoy/vim-signature
 git clone https://github.com/jalvesaq/Nvim-R
+git clone https://github.com/manabuishii/vim-cwl
 cd
 
 
