@@ -142,3 +142,6 @@ set splitright
 
 " Changing commentary setting for cwl files
 autocmd FileType cwl setlocal commentstring=#\ %s
+
+" Fast make
+nmap <leader>m :!make<cr>
