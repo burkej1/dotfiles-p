@@ -156,6 +156,8 @@ function! ToggleHiddenAll()
         set laststatus=0
         set noshowcmd
         set showtabline=0
+        set nonumber
+        set norelativenumber
     else
         let s:hidden_all = 0
         set showmode
@@ -163,6 +165,8 @@ function! ToggleHiddenAll()
         set laststatus=2
         set showcmd
         set showtabline=2
+        set number
+        set relativenumber
     endif
 endfunction
 " Shortcut to call function
