@@ -1,4 +1,31 @@
 execute pathogen#infect()
+" " Plugin list (not all used in vimrc)
+" FastFold
+" LargeFile
+" Nvim-R
+" SimpylFold
+" SyntaxRange
+" ale
+" haskell-vim
+" ingo-library
+" nerdtree
+" rust.vim
+" space-vim-dark
+" supertab
+" vim-airline
+" vim-commentary
+" vim-cpp-enhanced-highlight
+" vim-cwl
+" vim-dispatch
+" vim-easymotion
+" vim-minimap
+" vim-sensible
+" vim-signature
+" vim-sneak
+" vim-wdl
+" vimtex
+
+
 
 " Enable syntax highlighting
 syntax enable
