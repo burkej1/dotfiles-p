@@ -145,3 +145,25 @@ autocmd FileType cwl setlocal commentstring=#\ %s
 
 " Fast make
 nmap <leader>m :!make<cr>
+
+" Function to hide status line
+let s:hidden_all = 0
+function! ToggleHiddenAll()
+    if s:hidden_all  == 0
+        let s:hidden_all = 1
+        set noshowmode
+        set noruler
+        set laststatus=0
+        set noshowcmd
+        set showtabline=0
+    else
+        let s:hidden_all = 0
+        set showmode
+        set ruler
+        set laststatus=2
+        set showcmd
+        set showtabline=2
+    endif
+endfunction
+" Shortcut to call function
+nnoremap <S-h> :call ToggleHiddenAll()<CR>
