@@ -24,6 +24,7 @@ execute pathogen#infect()
 " vim-sneak
 " vim-wdl
 " vimtex
+" vim-orgmode
 
 
 
