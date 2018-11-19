@@ -36,6 +36,13 @@
 (setq org-fontify-whole-heading-line t)
 
 
+;; Function to call org-time-stamp-inactive with a prefix argument
+;; Defined here so it can be bound to a leader key combination using evil leader
+(defun org-time-stamp-inactive-prefixarg ()
+  (interactive)
+  (let ((current-prefix-arg '(4))) (call-interactively 'org-time-stamp-inactive)))
+
+
 ;;;; Package Installation and Settings ;;;;
 ;; Boostrapping straight.el package manager
 (let ((bootstrap-file
@@ -99,7 +106,8 @@
   (global-evil-leader-mode)
   ;; Evil-leader combination bindings
   (evil-leader/set-leader "<SPC>")
-  (evil-leader/set-key "w" 'save-buffer))
+  (evil-leader/set-key "w" 'save-buffer)
+  (evil-leader/set-key "t" 'org-time-stamp-inactive-prefixarg))
 
 (use-package evil-org
   :straight t
