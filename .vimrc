@@ -25,6 +25,7 @@ execute pathogen#infect()
 " vim-wdl
 " vimtex
 " vim-orgmode
+" vim-surround
 
 
 

@@ -146,6 +146,12 @@
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
+(use-package org-brain
+  :straight t
+  :after evil
+  :init
+  (setq org-brain-path "~/Dropbox/Writing_Sync/Writing/map")
+  (evil-set-initial-state 'org-brain-visualize-mode 'emacs))
 
 ;; Theme Settings
 ; (load-theme 'zenburn t)
