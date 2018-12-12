@@ -91,11 +91,11 @@
   :config
   (helm-mode 1))
 
-(use-package leuven-theme
-  :straight t
-  :init
-  ;; Changing leuven theme org mode heading scaling
-  (setq leuven-scale-outline-headlines 1.2))
+; (use-package leuven-theme
+;   :straight t
+;   :init
+;   ;; Changing leuven theme org mode heading scaling
+;   (setq leuven-scale-outline-headlines 1.2))
 
 (use-package evil-leader
   :straight t
@@ -155,10 +155,11 @@
 
 ;; Theme Settings
 ; (load-theme 'zenburn t)
-(load-theme 'leuven t)
-; (load-theme 'spacemacs-dark t)
+; (load-theme 'leuven t)
+(load-theme 'spacemacs-dark t)
 
 ;; Setting up smart mode line (complains if before the menu set theme
 (setq sml/no-confirm-load-theme t)
-(setq sml/theme 'light)
+; (setq sml/theme 'light)
+(setq sml/theme 'dark)
 (sml/setup)
