@@ -107,6 +107,7 @@
   ;; Evil-leader combination bindings
   (evil-leader/set-leader "<SPC>")
   (evil-leader/set-key "w" 'save-buffer)
+  (evil-leader/set-key "v" 'org-brain-visualize)
   (evil-leader/set-key "t" 'org-time-stamp-inactive-prefixarg))
 
 (use-package evil-org
@@ -151,7 +152,9 @@
   :after evil
   :init
   (setq org-brain-path "~/Dropbox/Writing_Sync/Writing/map")
-  (evil-set-initial-state 'org-brain-visualize-mode 'emacs))
+  (evil-set-initial-state 'org-brain-visualize-mode 'emacs)
+  (setq org-brain-visualize-default-choices 'all)
+  (setq org-brain-title-max-length 12))
 
 ;; Theme Settings
 ; (load-theme 'zenburn t)
