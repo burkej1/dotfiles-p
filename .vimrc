@@ -26,6 +26,8 @@ execute pathogen#infect()
 " vimtex
 " vim-orgmode
 " vim-surround
+" vim-speeddating
+" vim-repeat
 
 
 
@@ -200,3 +202,5 @@ function! ToggleHiddenAll()
 endfunction
 " Shortcut to call function
 nnoremap <S-h> :call ToggleHiddenAll()<CR>
+
+colorscheme space-vim-dark
