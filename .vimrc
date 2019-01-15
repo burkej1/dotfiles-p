@@ -28,6 +28,7 @@ execute pathogen#infect()
 " vim-surround
 " vim-speeddating
 " vim-repeat
+" vimwiki
 
 
 
@@ -59,7 +60,7 @@ let mapleader = " "
 let g:mapleader = " "
 
 " Fast saving
-nmap <leader>w :w!<cr>
+nmap <leader>s :w!<cr>
 
 "Always show current position
 set ruler
