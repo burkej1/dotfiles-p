@@ -29,6 +29,7 @@ execute pathogen#infect()
 " vim-speeddating
 " vim-repeat
 " vimwiki
+" vim-airline-themes
 
 
 
@@ -116,7 +117,7 @@ nnoremap <Right> :vertical resize +2<CR>
 
 " " " Plugin specific options (comment if not installed)
 
-" " Colour schemes
+" Colour schemes
 colorscheme space-vim-dark
  
 " " Vim airline
@@ -203,8 +204,6 @@ function! ToggleHiddenAll()
 endfunction
 " Shortcut to call function
 nnoremap <S-h> :call ToggleHiddenAll()<CR>
-
-colorscheme space-vim-dark
 
 " Additional SpeedDatingFormat for pgfgantt dates
 autocmd FileType tex SpeedDatingFormat %Y-%m
