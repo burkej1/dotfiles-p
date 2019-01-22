@@ -34,6 +34,9 @@
 (setq org-cycle-separator-lines 1)
 ;; Enabling font application to entire heading line (for leuven theme)
 (setq org-fontify-whole-heading-line t)
+;; Adding additional org mode states
+(setq org-todo-keywords
+      '((sequence "TODO" "IN-PROGRESS" "|" "DONE")))
 
 
 ;; Function to call org-time-stamp-inactive with a prefix argument
