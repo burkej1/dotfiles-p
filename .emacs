@@ -106,7 +106,7 @@
   (global-evil-leader-mode)
   ;; Evil-leader combination bindings
   (evil-leader/set-leader "<SPC>")
-  (evil-leader/set-key "w" 'save-buffer)
+  (evil-leader/set-key "s" 'save-buffer)
   (evil-leader/set-key "v" 'org-brain-visualize)
   (evil-leader/set-key "t" 'org-time-stamp-inactive-prefixarg))
 
