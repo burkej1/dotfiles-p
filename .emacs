@@ -36,7 +36,7 @@
 (setq org-fontify-whole-heading-line t)
 ;; Adding additional org mode states
 (setq org-todo-keywords
-      '((sequence "TODO" "IN-PROGRESS" "|" "DONE")))
+      '((sequence "TODO" "IN-PROGRESS" "WAITING" "|" "DONE")))
 
 
 ;; Function to call org-time-stamp-inactive with a prefix argument
