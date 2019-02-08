@@ -28,7 +28,6 @@ execute pathogen#infect()
 " vim-surround
 " vim-speeddating
 " vim-repeat
-" vimwiki
 " vim-airline-themes
 
 
